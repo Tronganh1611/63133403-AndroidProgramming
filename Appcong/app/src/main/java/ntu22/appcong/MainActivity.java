@@ -36,5 +36,10 @@ public class MainActivity extends AppCompatActivity {
        //chuyển chuỗi sang số
         int so_A = Integer.parseInt(strA);
         int so_B = Integer.parseInt(strB);
+        //tính tổng
+        int tong = so_A + so_B;
+        String strkq = String.valueOf(tong);
+        //hiện ra màn hình
+        editestKetQua.setText(strkq);
     }
 }
