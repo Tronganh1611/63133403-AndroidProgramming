@@ -20,6 +20,10 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ArrayList<String> dsTenTinhThanhVN;//khai bao
     ArrayAdapter<String> adapterTinhThanh;
+    //khai bao nut
+    Button nut= findViewById(R.id.btn);
+    Button nut1= findViewById(R.id.btn1);
+    Button nut2= findViewById(R.id.btn3);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         //Hiển thị dữ liệu trên list view
-        Button nut= findViewById(R.id.btn);
         //B1+:cần có dữ liệu
 
         dsTenTinhThanhVN = new ArrayList<String>();//tao the hien cu the
@@ -52,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         //3.3 gan bo lang nghe
         lvTenTinhThanh.setOnItemClickListener(BoLangNghevaXL);
         nut.setOnClickListener(Them);
+        nut1.setOnClickListener(Xoa);
+        nut2.setOnClickListener(Sua);
     }
     //Tao bo lang nghe va xu li su kien Onclick
     //Vd:BolangNgheVaXL
@@ -78,4 +83,36 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+    View.OnClickListener Xoa = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            EditText strTP = findViewById(R.id.edt);
+            String Ten = strTP.getText().toString();
+            if (!Ten.isEmpty() && dsTenTinhThanhVN.contains(Ten)){
+                dsTenTinhThanhVN.remove(Ten);
+                adapterTinhThanh.notifyDataSetChanged();
+            }else{
+                Toast.makeText(MainActivity.this, "Tên không tồn tại trong danh sách, mời bạn nhập lại ", Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
+
+    View.OnClickListener Sua = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            EditText strTP = findViewById(R.id.edt);
+            EditText strTPNew = findViewById(R.id.edtNew);
+            String Ten = strTP.getText().toString();
+            String TenMoi = strTPNew.getText().toString();
+            if (!Ten.isEmpty() && dsTenTinhThanhVN.contains(Ten)){
+                int vt = dsTenTinhThanhVN.indexOf(Ten);
+                dsTenTinhThanhVN.set(vt, TenMoi);
+                adapterTinhThanh.notifyDataSetChanged();
+            }else{
+                Toast.makeText(MainActivity.this, "Tên không tồn tại trong danh sách, mời bạn nhập lại ", Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
+
+
 }
