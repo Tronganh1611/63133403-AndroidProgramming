@@ -1,4 +1,4 @@
-package BuiTrongAnh.baikt1;
+package BUITRONGANH.baikt1;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package BuiTrongAnh.baikt1;
+package BUITRONGANH.baikt1;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("BuiTrongAnh.baikt1", appContext.getPackageName());
+        assertEquals("BUITRONGANH.baikt1", appContext.getPackageName());
     }
 }

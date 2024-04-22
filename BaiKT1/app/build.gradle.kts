@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "BuiTrongAnh.baikt1"
+    namespace = "BUITRONGANH.baikt1"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "BuiTrongAnh.baikt1"
+        applicationId = "BUITRONGANH.baikt1"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
