@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/cal"
+    <item
+        android:id="@+id/cal"
+        android:enabled="true"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
-        android:title="@string/cal"></item>
-    <item android:id="@+id/pro"
+        android:title="@string/cal" />
+    <item
+        android:id="@+id/pro"
+        android:enabled="true"
         android:icon="@android:drawable/ic_menu_myplaces"
-        android:title="@string/pro"></item>
-    <item android:id="@+id/music"
+        android:title="@string/pro" />
+    <item
+        android:id="@+id/music"
+        android:enabled="true"
         android:icon="@android:drawable/ic_media_previous"
-        android:title="@string/music"></item>
+        android:title="@string/music" />
 </menu>
