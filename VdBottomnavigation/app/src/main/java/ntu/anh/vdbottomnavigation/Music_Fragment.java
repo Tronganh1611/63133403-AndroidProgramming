@@ -2,11 +2,18 @@ package ntu.anh.vdbottomnavigation;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,15 +57,37 @@ public class Music_Fragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_music_, container, false);
+        View view=inflater.inflate(R.layout.fragment_music_, container, false);
+        ListView lvBaiHat;
+        //Buoc 2
+        ArrayList<String> dsBH;
+        dsBH = new ArrayList<String>();
+        dsBH.add("Tip toe");
+        dsBH.add("Dancing with my phone");
+        dsBH.add("telescope");
+        //Buoc 3
+        ArrayAdapter adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_list_item_1, dsBH);
+        //buoc 4
+        lvBaiHat = view.findViewById(R.id.lv);
+        lvBaiHat.setAdapter(adapter);
+        //buoc 5 xu li sựu kiện
+        lvBaiHat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //code xu li o day vidu
+                String chuoiThongBao = "ban chon 1 bai"+dsBH.get(position);
+                Toast.makeText(view.getContext(), chuoiThongBao,Toast.LENGTH_SHORT).show();
+            }
+        });
+        return view;
     }
+        // Inflate the layout for this fragment
+
 }

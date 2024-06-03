@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,14 +17,6 @@ import android.view.ViewGroup;
  */
 public class Cal_Fragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public Cal_Fragment() {
         // Required empty public constructor
@@ -40,8 +34,6 @@ public class Cal_Fragment extends Fragment {
     public static Cal_Fragment newInstance(String param1, String param2) {
         Cal_Fragment fragment = new Cal_Fragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -50,8 +42,7 @@ public class Cal_Fragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -59,6 +50,28 @@ public class Cal_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cal_, container, false);
+        View view=  inflater.inflate(R.layout.fragment_cal_, container, false);
+        EditText editestsoA = view.findViewById(R.id.edtA);
+        EditText editestsoB = view.findViewById(R.id.eddtB);
+        EditText editestKetQua = view.findViewById(R.id.edtKQ);
+        Button btnCong = view.findViewById(R.id.btncong);
+        btnCong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //lấy dữ liệu
+                String strA = editestsoA.getText().toString();
+                String strB = editestsoB.getText().toString();
+                //chuyển chuỗi sang số
+                int so_A = Integer.parseInt(strA);
+                int so_B = Integer.parseInt(strB);
+                //tính tổng
+                int tong = so_A + so_B;
+                String strkq = String.valueOf(tong);
+                //hiện ra màn hình
+                editestKetQua.setText(strkq);
+            }
+        });
+        return  view;
     }
+
 }
