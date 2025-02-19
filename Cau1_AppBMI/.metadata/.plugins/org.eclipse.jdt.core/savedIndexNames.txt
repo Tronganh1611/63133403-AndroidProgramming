@@ -1,1 +1,0 @@
-INDEX VERSION 1.134+D:\MyProjects\63133403-JavaPrograming\TH_Bai0_SimpleCaculator\.metadata\.plugins\org.eclipse.jdt.core
