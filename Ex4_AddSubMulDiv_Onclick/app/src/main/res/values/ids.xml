@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="edtkq" type="id">edtkq</item>
+    <item name="btnChia" type="id">btnChia</item>
+    <item name="btnNhan" type="id">btnNhan</item>
+    <item name="btnTru" type="id">btnTru</item>
+    <item name="btnCong" type="id">btnCong</item>
+    <item name="edtSo2" type="id">edtSo2</item>
+</resources>
