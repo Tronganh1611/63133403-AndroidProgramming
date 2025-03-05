@@ -10,106 +10,129 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:background="#A11FC5"
         android:layout_marginTop="15dp"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:background="#A11FC5">
+        android:padding="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Số Thứ Nhất"
-            android:textSize="18dp"
-            android:textColor="#1BCADF"/>
+            android:textColor="#1BCADF"
+            android:textSize="18dp" />
+
         <EditText
             android:id="@+id/edtSo1"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="Mời nhập một số ở đây"
-            />
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:background="#A11FC5"
         android:layout_marginTop="15dp"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:background="#A11FC5">
+        android:padding="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Số Thứ Hai"
-            android:textSize="18dp"
-            android:textColor="#1BCADF"/>
+            android:textColor="#1BCADF"
+            android:textSize="18dp" />
+
         <EditText
             android:id="@+id/edtSo2"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="Mời nhập một số ở đây"
-            />
+            android:layout_weight="1"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:ems="10"
+            android:inputType="text"/>
     </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:padding="5dp"
-            android:layout_marginTop="15dp"
-            android:layout_height="80dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:background="#387EC5">
-            <Button
-                android:id="@+id/btnCong"
-                android:padding="2dp"
-                android:onClick="XuliCong"
-                android:text="+"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/btnTru"
-                android:padding="2dp"
-                android:text="-"
-                android:onClick="XuliTru"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/btnNhan"
-                android:padding="2dp"
-                android:text="*"
-                android:onClick="XuliNhan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/btnChia"
-                android:padding="2dp"
-                android:text="/"
-                android:onClick="XuliChia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:padding="5dp"
-            android:layout_marginTop="15dp"
-            android:layout_height="80dp"
-            android:orientation="horizontal"
-            android:background="#A11FC5">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Kết Quả: "
-                android:textSize="18dp"
-                android:textColor="#1BCADF"/>
-            <EditText
-                android:id="@+id/edtkq"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:hint="Hiện kết quả"
-                android:enabled="false"
-                />
-        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#387EC5"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btnCong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="XuliCong"
+            android:padding="2dp"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnTru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="XuliTru"
+            android:padding="2dp"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnNhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="XuliNhan"
+            android:padding="2dp"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/btnChia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="XuliChia"
+            android:padding="2dp"
+            android:text="/" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A11FC5"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ket qua"
+            android:textColor="#1BCADF"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/edtkq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:minWidth="48dp"
+            android:minHeight="48dp" />
+
+    </LinearLayout>
 </LinearLayout>
