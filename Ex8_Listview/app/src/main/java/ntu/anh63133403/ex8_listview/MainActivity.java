@@ -48,5 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Ban chon: " + dsNNLT.get(i), Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 }
