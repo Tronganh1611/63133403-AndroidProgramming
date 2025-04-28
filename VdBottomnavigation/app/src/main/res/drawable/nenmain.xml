@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:adroid="http://schemas.android.com/apk/res/android">
+    <gradient
+        adroid:angle="90"
+        adroid:type="linear"
+        adroid:startColor="#737373"
+        adroid:centerColor="#67C6C1"
+        adroid:endColor="#D9D9D9"
+        />
+</shape>

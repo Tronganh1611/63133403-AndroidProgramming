@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VdBottomnavigation</string>
+    <string name="cal">Tính Toán</string>
+    <string name="pro">Giới Thiệu</string>
+    <string name="music">Âm Nhạc</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
